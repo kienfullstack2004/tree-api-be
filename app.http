@@ -1,0 +1,185 @@
+GET http://localhost:3000/
+
+###
+POST http://localhost:3001/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "username":"nguyentrungkien",
+    "phone":"01233",
+    "pass":"1236",
+    "avatar":"/src/assets/images/user.jpg"
+}
+
+###
+POST http://localhost:3001/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "phone":"03360",
+    "pass":"123456"
+}
+
+###
+POST http://localhost:3001/api/v1/tree/createTree
+Content-Type: application/json 
+
+{
+    "nameTree":"Cây phong lan",
+    "desTree":"Cây được mọi người ưa chuộng nhất Việt Nam",
+    "imageTree":"https://nuoitrong.com/wp-content/uploads/2023/11/cay-phong-lan-anh-1.jpg",
+    "zalo":"0336099317"
+}
+
+###
+GET http://localhost:3001/api/v1/tree/getAllTree
+###
+GET http://localhost:3001/api/v1/post/getAllPost
+###
+GET http://localhost:3001/api/v1/auth/getAllUser
+###
+GET http://localhost:3001/api/v1/tree/getAllMedicine
+
+
+
+###
+POST http://localhost:3001/api/v1/post/create 
+Content-Type: application/json
+
+{
+    "title":"Kien Tao Post chịu tổn thất đầu tiên trước trận gặp Campuchia",
+    "titleShort":"Theo nguồn tin của Báo điện tử VTC News, Bùi Hoàng Việt Anh sẽ được trả về CLB Công an Hà Nội đề điều trị chấn thương. Anh gặp vết đau ở vùng đầu gối và không thể tập luyện cho đội tuyển Việt Nam những ngày qua. Như vậy, trung vệ sinh năm 1999 là cái tên đầu tiên nói lời chia tay đội tuyển quốc gia trong đợt tập trung tháng 3/2025.",
+    "image":"https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1nI9nr.img?w=720&h=405&m=6&x=311&y=57&s=68&d=68",
+    "detail":"Đội tuyển Việt Nam sẽ đá giao hữu với Campuchia ngày 19/3. Sau đó 6 ngày, thầy trò huấn luyện viên Kim Sang-sik bước vào trận đấu chính thức gặp đội tuyển Lào trong khuôn khổ vòng loại Asian Cup 2027. Nhà cầm quân người Hàn Quốc vẫn có đủ lựa chọn ở hàng thủ khi Bùi Hoàng Việt Anh không góp mặt."
+}
+
+###
+
+
+###
+GET http://localhost:3001/api/v1/post/TuyenVietNam
+
+###
+GET http://localhost:3001/api/v1/auth/getcomment/c152fbbd-a823-472f-a7dc-ff9841513d65
+
+
+###
+GET http://localhost:3001/api/v1/auth/getOneUserCurrent
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMzNmJlNDY3LTBlYWMtNGQzYS1hNWVhLTRkNGE2ZWJjYjFmZCIsInBob25lIjoiMDMzNjA5OTMxMSIsImF2YXRhciI6bnVsbCwiaWF0IjoxNzQyMDY2MjU0LCJleHAiOjE3NDIyMzkwNTR9.7GIBeZJ48lyhj1ED5D06CvCR_vwoa3EXvkqsGNhxADc
+
+
+###
+POST http://localhost:3001/api/v1/auth/update
+Content-Type: application/json
+
+{
+    "id":"0f8d82cb-f516-46f3-9532-12a117cd11fe",
+    "username":"Nguyen Quang Hai",
+    "phone":"0123456782",
+    "avatar":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.theroadtoglenlough.com%2F%3Ft%3D160120515&psig=AOvVaw3guuiaxHPLSu_d-xCWCVR_&ust=1742160000942000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCLiU0_eBjYwDFQAAAAAdAAAAABAJ"
+}
+
+###
+
+
+###
+GET http://localhost:3001/api/v1/post/news/20fc74d6-03cc-467a-ac5e-7a3059afe684
+
+###
+GET http://localhost:3001/api/v1/post/allnews
+
+###
+DELETE http://localhost:3001/api/v1/tree/deleteTree/20fc74d6-03cc-467a-ac5e-7a3059afe684
+
+
+###
+GET http://localhost:3001/api/v1/auth/getCountComent/c152fbbd-a823-472f-a7dc-ff9841513d65
+
+###
+POST http://localhost:3001/api/v1/tree/createMedicine
+Content-Type: application/json
+
+{
+    "nameMedicine":"Top 10 cay thuoc duoc nhieu nguoi su dung",
+    "desMedicineShort":"Top danh sach 10 loai thuoc duoc cho la bau chon nhieu tren top cac loai thuoc dac biet la ...",
+    "desMedicinedetail":"Danh sach 10 loai thuoc quy hiem lot vao top 10 cay thuoc quy nhat la : ",
+    "imageMedicine":"/src/assets/iamges/ba.jpg"
+}
+
+###
+
+
+###
+DELETE http://localhost:3001/api/v1/tree/deleteMedicine/1
+
+
+###
+DELETE http://localhost:3001/api/v1/post/deleteNews/59fcc45b-5297-4e44-b002-f5cce70bee54
+
+###
+DELETE http://localhost:3001/api/v1/auth/deleteAccount/2dc0f0e9-d134-48f6-b333-a51668b595d3
+
+
+###
+GET http://localhost:3001/api/v1/tree/editmedicine/061330c9-12a6-4509-8945-65d4151a5ac1
+
+###
+GET http://localhost:3001/api/v1/auth/editaccount/061330c9-12a6-4509-8945-65d4151a5ac1
+
+###
+GET http://localhost:3001/api/v1/post/editnews/061330c9-12a6-4509-8945-65d4151a5ac1
+
+
+###
+GET http://localhost:3001/api/v1/tree/edittree/061330c9-12a6-4509-8945-65d4151a5ac1
+
+###
+POST http://localhost:3001/api/v1/auth/updateAccount
+Content-Type: application/json
+
+{
+    "id":"1a73665a-16ec-41eb-9fcc-03ff691f51eb",
+    "phone":"012345",
+    "username":"NguyenKien",
+    "pass":"123456",
+    "avatar":"/src/assets/images/user.jpg"
+}
+
+###
+POST http://localhost:3001/api/v1/post/updateNews
+Content-Type: application/json
+
+{
+    "id":"",
+    "title":"",
+    "titleShort":"",
+    "image":"",
+    "detail":""
+}
+
+###
+POST http://localhost:3001/api/v1/tree/updateTree
+Content-Type: application/json
+
+{
+    "id":"",
+    "nameTree":"",
+    "desTree":"",
+    "imageTree":""
+}
+
+###
+POST http://localhost:3001/api/v1/tree/updateMedicine
+Content-Type: application/json
+
+{
+    "id":"",
+    "nameMedicine":"",
+    "desMedicineShort":"",
+    "desMedicinedetail":"",
+    "imageMedicine":""
+}
+
+
+###
+GET http://localhost:3001/api/v1/post/getAllCountComment
