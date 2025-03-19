@@ -43,18 +43,15 @@ GET http://localhost:3000/api/v1/tree/getAllMedicine
 
 
 ###
-POST http://localhost:3000/api/v1/post/create 
+POST http://localhost:3000/api/v1/post/createNew
 Content-Type: application/json
 
 {
-    "title":"Kien Tao Post chịu tổn thất đầu tiên trước trận gặp Campuchia",
-    "titleShort":"Theo nguồn tin của Báo điện tử VTC News, Bùi Hoàng Việt Anh sẽ được trả về CLB Công an Hà Nội đề điều trị chấn thương. Anh gặp vết đau ở vùng đầu gối và không thể tập luyện cho đội tuyển Việt Nam những ngày qua. Như vậy, trung vệ sinh năm 1999 là cái tên đầu tiên nói lời chia tay đội tuyển quốc gia trong đợt tập trung tháng 3/2025.",
-    "image":"https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB1nI9nr.img?w=720&h=405&m=6&x=311&y=57&s=68&d=68",
-    "detail":"Đội tuyển Việt Nam sẽ đá giao hữu với Campuchia ngày 19/3. Sau đó 6 ngày, thầy trò huấn luyện viên Kim Sang-sik bước vào trận đấu chính thức gặp đội tuyển Lào trong khuôn khổ vòng loại Asian Cup 2027. Nhà cầm quân người Hàn Quốc vẫn có đủ lựa chọn ở hàng thủ khi Bùi Hoàng Việt Anh không góp mặt."
+    "title":"Kiem soat tinh hinh trat tu tai cac dia phuong tren dia ban thanh pho quang ngai",
+    "titleShort":"Cong an hop tac voi cac don vi dia phuong ve van de an ninh trat tu",
+    "detail":"Ngay 19/3/2025 cac to chuc chinh quyen bat tay trien khai cac nhiem vu ...",
+    "image":"https://img.baobacgiang.vn/Medias/2020/12/24/10/20201224103217-04.jpg"
 }
-
-###
-
 
 ###
 GET http://localhost:3000/api/v1/post/TuyenVietNam
@@ -86,7 +83,7 @@ Content-Type: application/json
 GET http://localhost:3001/api/v1/post/news/20fc74d6-03cc-467a-ac5e-7a3059afe684
 
 ###
-GET http://localhost:3001/api/v1/post/allnews
+GET http://localhost:3000/api/v1/post/allnews
 
 ###
 DELETE http://localhost:3001/api/v1/tree/deleteTree/20fc74d6-03cc-467a-ac5e-7a3059afe684
@@ -182,4 +179,4 @@ Content-Type: application/json
 
 
 ###
-GET http://localhost:3001/api/v1/post/getAllCountComment
+GET http://localhost:3000/api/v1/post/getAllCountComment

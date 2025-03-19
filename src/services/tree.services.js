@@ -9,7 +9,6 @@ module.exports.createTreeService = ({ nameTree, desTree, zalo, imageTree }) => n
             desTree,
             zalo,
             imageTree
-
         })
 
         return relsove({
@@ -31,7 +30,7 @@ module.exports.getAllTreeService = () => new Promise(async (relsove, reject) => 
             data: responsive ? responsive : null
         })
     } catch (error) {
-        return reject(err);
+        return reject(error);
     }
 });
 

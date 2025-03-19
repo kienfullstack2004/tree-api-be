@@ -1,17 +1,5 @@
 const service = require("../services/post.services");
 
-module.exports.createPost = async(req,res,next) => {
-    try {
-        const responsive = await service.createPostService(req.body);
-        return res.status(200).json(responsive);
-    } catch (error) {
-        return res.status(500).json({
-            err:-1,
-            msg:"Interal Server Error"
-        })
-    }
-}
-
 module.exports.getAllPost = async(req,res,next) => {
     try {
         const responsive = await service.getPostService();
@@ -96,3 +84,15 @@ module.exports.updateNews = async(req,res,next) => {
         })
     }
 }
+
+module.exports.createNew = async(req,res,next) => {
+    try {
+        const responsive = await service.createNewService(req.body);
+     return res.status(200).json(responsive);
+    } catch (error) {
+        return res.status(500).json({
+            err:-1,
+            msg:error.name
+        })
+    }
+} 
